@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    var expenditureModel: ExpenditureModel = ExpenditureModel()
     
     @IBOutlet weak var foodField: UITextField!
     @IBOutlet weak var transportationField: UITextField!
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Initialize values for text fields to 0
-        self.initializeTextFieldValues()
+        self.initializeTextValues()
         
         // Button Styling
         addButton.layer.cornerRadius = 5
@@ -80,22 +80,60 @@ class ViewController: UIViewController {
         self.otherField.resignFirstResponder()
     }
     
-    private func initializeTextFieldValues() {
+    private func initializeTextValues() {
+        self.resetValueFields()
+        self.resetTotalFields()
+    }
+    
+    private func resetValueFields() {
         foodField.text = "0"
         transportationField.text = "0"
         householdField.text = "0"
         otherField.text = "0"
+    }
+    
+    private func resetTotalFields() {
         foodTotalField.text = "0"
         transportationTotalField.text = "0"
         householdTotalField.text = "0"
         otherTotalField.text = "0"
     }
     
+    private func clearPercentages() {
+        foodPercentage.text = "0%"
+        transportationPercentage.text = "0%"
+        householdPercentage.text = "0%"
+        otherPercentage.text = "0%"
+    }
+    
     @IBAction func touchAdd(sender: UIButton) {
+        expenditureModel.sumExpenses(
+            (foodField.text as NSString).floatValue,
+            transportationValue: (transportationField.text as NSString).floatValue,
+            householdValue: (householdField.text as NSString).floatValue,
+            otherValue: (otherField.text as NSString).floatValue
+        )
+        expenditureModel.calculatePercentages()
+        
+        foodTotalField.text = "\(expenditureModel.foodSum)"
+        transportationTotalField.text = "\(expenditureModel.transportationSum)"
+        householdTotalField.text = "\(expenditureModel.householdSum)"
+        otherTotalField.text = "\(expenditureModel.otherSum)"
+        
+        foodPercentage.text = "\(expenditureModel.foodPercentage)%"
+        transportationPercentage.text = "\(expenditureModel.transportationPercentage)%"
+        householdPercentage.text = "\(expenditureModel.householdPercentage)%"
+        otherPercentage.text = "\(expenditureModel.otherPercentage)%"
+        
     }
     @IBAction func touchClear(sender: UIButton) {
+        self.resetValueFields()
+        
     }
     @IBAction func touchClearAll(sender: UIButton) {
+        self.initializeTextValues()
+        self.clearPercentages()
+        expenditureModel = ExpenditureModel()
     }
     
 

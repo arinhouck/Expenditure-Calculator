@@ -13,6 +13,7 @@
 		F772219E1B9CCDF6008FD7D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F772219D1B9CCDF6008FD7D7 /* Images.xcassets */; };
 		F77221A11B9CCDF6008FD7D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F772219F1B9CCDF6008FD7D7 /* LaunchScreen.xib */; };
 		F77221AD1B9CCDF6008FD7D7 /* Expenditure_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77221AC1B9CCDF6008FD7D7 /* Expenditure_CalculatorTests.swift */; };
+		F77221B71B9CEBC3008FD7D7 /* ExpenditureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77221B61B9CEBC3008FD7D7 /* ExpenditureModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F77221A61B9CCDF6008FD7D7 /* Expenditure CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Expenditure CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77221AB1B9CCDF6008FD7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F77221AC1B9CCDF6008FD7D7 /* Expenditure_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenditure_CalculatorTests.swift; sourceTree = "<group>"; };
+		F77221B61B9CEBC3008FD7D7 /* ExpenditureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenditureModel.swift; path = "Expenditure Calculator/Model/ExpenditureModel.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				F77221961B9CCDF6008FD7D7 /* AppDelegate.swift */,
+				F77221B61B9CEBC3008FD7D7 /* ExpenditureModel.swift */,
 				F77221981B9CCDF6008FD7D7 /* ViewController.swift */,
 				F772219A1B9CCDF6008FD7D7 /* Main.storyboard */,
 				F772219D1B9CCDF6008FD7D7 /* Images.xcassets */,
@@ -214,6 +217,7 @@
 			files = (
 				F77221991B9CCDF6008FD7D7 /* ViewController.swift in Sources */,
 				F77221971B9CCDF6008FD7D7 /* AppDelegate.swift in Sources */,
+				F77221B71B9CEBC3008FD7D7 /* ExpenditureModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
