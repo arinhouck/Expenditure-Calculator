@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Initialize values for text fields to 0
+        self.initializeTextFieldValues()
+        
         // Button Styling
         addButton.layer.cornerRadius = 5
         addButton.layer.borderWidth = 1
@@ -75,6 +78,17 @@ class ViewController: UIViewController {
         self.foodField.resignFirstResponder()
         self.householdField.resignFirstResponder()
         self.otherField.resignFirstResponder()
+    }
+    
+    private func initializeTextFieldValues() {
+        foodField.text = "0"
+        transportationField.text = "0"
+        householdField.text = "0"
+        otherField.text = "0"
+        foodTotalField.text = "0"
+        transportationTotalField.text = "0"
+        householdTotalField.text = "0"
+        otherTotalField.text = "0"
     }
     
     @IBAction func touchAdd(sender: UIButton) {
