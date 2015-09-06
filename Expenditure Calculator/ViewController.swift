@@ -60,6 +60,30 @@ class ViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    // Resign func for the return key
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.foodField.resignFirstResponder()
+        self.transportationField.resignFirstResponder()
+        self.householdField.resignFirstResponder()
+        self.otherField.resignFirstResponder()
+        return true
+    }
+    
+    // Keyboard disappears on touch outside context
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.foodField.resignFirstResponder()
+        self.householdField.resignFirstResponder()
+        self.otherField.resignFirstResponder()
+    }
+    
+    @IBAction func touchAdd(sender: UIButton) {
+    }
+    @IBAction func touchClear(sender: UIButton) {
+    }
+    @IBAction func touchClearAll(sender: UIButton) {
+    }
+    
 
 
 }

@@ -77,6 +77,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.0" green="0.86274509799999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hy-ud-Hym"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djJ-34-76f">
                                 <rect key="frame" x="142" y="300" width="90" height="32"/>
@@ -84,6 +87,9 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="0.0" green="0.86274509799999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBC-Xm-jS0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gK-gY-joB">
                                 <rect key="frame" x="269" y="300" width="90" height="32"/>
@@ -91,6 +97,9 @@
                                 <state key="normal" title="Clear All">
                                     <color key="titleColor" red="0.0" green="0.86274509799999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchClearAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfG-pP-jOB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mng-uY-h3f">
                                 <rect key="frame" x="16" y="423" width="112" height="28"/>
