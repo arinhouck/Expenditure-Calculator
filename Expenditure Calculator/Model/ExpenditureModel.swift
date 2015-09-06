@@ -35,7 +35,7 @@ class ExpenditureModel {
     func calculatePercentages() {
         var totalExpenditures = foodSum + transportationSum + householdSum + otherSum
         
-        if totalExpenditures == 0 {
+        if totalExpenditures == 0 { // Prevents from return nan when dividing by 0
             return
         }
         

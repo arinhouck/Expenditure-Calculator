@@ -115,11 +115,14 @@ class ViewController: UIViewController {
         )
         expenditureModel.calculatePercentages()
         
+        
+        // Set total text fields values
         foodTotalField.text = "\(expenditureModel.foodSum)"
         transportationTotalField.text = "\(expenditureModel.transportationSum)"
         householdTotalField.text = "\(expenditureModel.householdSum)"
         otherTotalField.text = "\(expenditureModel.otherSum)"
         
+        // Set percentage text field values
         foodPercentage.text = "\(expenditureModel.foodPercentage)%"
         transportationPercentage.text = "\(expenditureModel.transportationPercentage)%"
         householdPercentage.text = "\(expenditureModel.householdPercentage)%"
